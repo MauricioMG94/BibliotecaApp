@@ -1,0 +1,15 @@
+{% load crispy_forms_tags %}
+<html>
+    <head>
+        <title>Crear Libros</title>
+    </head>
+    <body>
+        <h1>Eliminar Libro</h1>
+        <p>¿Estás seguro de que quieres eliminar a {{ libro.nombre }}?</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Sí, eliminar</button>
+        </form>
+        <a href="{% url 'lista_libros' %}">Volver a la lista de libros</a>
+    </body>
+</html>

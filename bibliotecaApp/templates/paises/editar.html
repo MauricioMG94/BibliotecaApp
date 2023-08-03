@@ -1,0 +1,15 @@
+{% load crispy_forms_tags %}
+<html>
+    <head>
+        <title>Editar País</title>
+    </head>
+    <body>
+<h1>Editar País</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar cambios</button>
+        </form>
+        <a href="{% url 'lista_paises' %}">Volver a la lista de países</a>
+    </body>
+</html>

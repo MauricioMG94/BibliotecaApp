@@ -1,0 +1,15 @@
+{% load crispy_forms_tags %}
+<html>
+    <head>
+        <title>Crear Países</title>
+    </head>
+    <body>
+        <h1>Eliminar País</h1>
+        <p>¿Estás seguro de que quieres eliminar a {{ pais.nombre }}?</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Sí, eliminar</button>
+        </form>
+        <a href="{% url 'lista_paises' %}">Volver a la lista de países</a>
+    </body>
+</html>

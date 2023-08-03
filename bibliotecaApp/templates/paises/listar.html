@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Países</title>
+    </head>
+    <body>
+        <h1>Lista de Países</h1>
+        <ul>
+        {% for pais in paises %}
+            <li>
+                {{ pais.nombre }}
+                <a href="{% url 'editar_pais' pais.id %}">Editar</a>
+                <a href="{% url 'eliminar_pais' pais.id %}">Eliminar</a>
+            </li>
+        {% endfor %}
+        </ul>
+        <a href="{% url 'crear_pais' %}">Crear Nuevo País</a>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Autores</title>
+    </head>
+    <body>
+        <h1>Crear Autor</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <a href="{% url 'lista_autores' %}">Volver a la lista de autores</a>
+    </body>
+</html>

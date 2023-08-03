@@ -1,0 +1,16 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Libros</title>
+    </head>
+    <body>
+        <h1>Crear Libro</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <a href="{% url 'lista_libros' %}">Volver a la lista de libros</a>
+    </body>
+</html>
